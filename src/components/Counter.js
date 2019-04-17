@@ -4,12 +4,19 @@ import {Component} from 'react';
 // React component
 class Counter extends Component {
   render() {
-    const { value, onIncreaseClick, onDecreaseClick } = this.props
+    const { 
+      CountValue, 
+      RandoPerson, 
+      onIncreaseClick, 
+      onDecreaseClick, 
+      onFindRandoPersonClick } = this.props
     return (
       <div>
-        <span>{value}</span>
+        <span>{CountValue}</span>
+        <div>Your rando is ": {RandoPerson.name}</div>
         <button onClick={onIncreaseClick}>Increase</button>
         <button onClick={onDecreaseClick}>Decrease</button>
+        <button onClick={onFindRandoPersonClick}>Find Rando</button>
       </div>
     )
   }
